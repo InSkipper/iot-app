@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    padding: 15px;
+    /*text-align: center;*/
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(170,221,255,1) 17%, rgba(1,126,208,1) 100%);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+
+.greenhouse_btn, .weatherStation_btn, .security_btn, .menu_btn, .logout_btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: rgb(0, 133, 20); /* Серый цвет фона */
+    color: #dedede; /* Белый цвет текста */
+    border: 2px solid #000000; 
+    border-radius: 4px;
+    font: italic small-caps bold 16px cursive;
+
+    padding: 10px 15px; 
+    text-decoration: none;  
+    cursor: pointer;
+}
+
+.logout_btn{
+    background: black;
+}
+
+.account_btn{
+    text-align: right;
+    float: right;
+}
+
+.navigation_btn {
+    text-align: center;
+    position: relative;
+    display: inline;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+body {
+    /*background-color: rgb(255, 255, 255);*/
+    background: rgb(163,198,221);
+background: linear-gradient(0deg, rgba(163,198,221,1) 0%, rgba(243,163,216,1) 20%, rgba(178,123,225,1) 39%, rgba(97,111,214,1) 60%, rgba(74,3,174,1) 100%);
+    margin: 0;
+    min-height: 100vh;
+}
+
+figure {
+    width: 100%; /* Ширина области */
+    height: 700px; /* Высота области */
+    margin: 0px; /* Обнуляем отступы */
+}
+
+.startPage {
+    background-image: url("http://images-iot.storage.yandexcloud.net/sky.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.startPage .NameWeb{
+    font: italic small-caps bold 28px/2 cursive;
+    background-color: rgba(255, 255, 255, 0.384);
+    width: 600px;
+    height: 70px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 5px 45px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-left:100px;
+    margin-top: 15%;
+    line-height: 2em;
+    
+}
+
+.startPage .column{
+    text-align: center;
+    width: 25%;
+    padding: 15px;
+    height: 185px;
+    padding-bottom: 15px;
+    border-left: 1px solid rgb(0, 0, 0);
+}
+
+.startPage .row{
+    margin-top: 50px;
+    height: 30%;
+    background-color: #004cff70;
+}
+
+.Temperature_btn {
+    background-color: #ee81b7;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.Humidity_btn {
+    background-color: #cb83f5;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.Air_btn {
+    background-color: #13e4d3;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.Precipitation_btn {
+    background-color: #dcee66;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.ColorDataLens{
+    /*background-color: rgba(194, 231, 255, 0.290);*/
+    padding-top: 50px;
+}
+
+.DataLens figure {
+    width: 100%; /* Ширина области */
+    height: 100%; /* Высота области */
+    margin: 0; /* Обнуляем отступы */
+}
+
+.resized{
+    height: 100%;
+    width: 100%;
+}
+
+.HrefLens {
+    height: 85%;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+#footer {
+    position: relative; /* Фиксированное положение */
+    text-align: right;
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding-top: 10px; /* Поля вокруг текста */
+    padding-right: 10px; /* Поля вокруг текста */
+    padding-left: 10px; /* Поля вокруг текста */
+    padding-bottom: 3px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(163,198,221,1) 9%);
+    color: #000000; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    font-weight: bold;
+
+
+  }
+
+  @media all and (orientation: portrait){
+    .startPage .NameWeb{
+        margin-block-start: 1.5em;
+    }
+}
+
+
+.alert {
+    display: none;
+}
+
+.alert_img{
+    display: none;
+}
+
+@media screen and (orientation: portrait) { 
+    .alert {
+        display: flex;
+    
+        background-color: #ffffff;
+    
+        position: fixed;
+        width: 100%;
+        height: 100%;  
+        display: block;
+        z-index:99999999;
+    
+        text-align: center;
+    
+        padding: 100px;
+    }
+    
+
+    .alert_img{
+        display: flex;
+    
+        background-image: url("http://images-iot.storage.yandexcloud.net/smile-glasses.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 10%;
+        height: 30%;
+    
+        margin-left: 45%;
+    }
+} 
+
+@media(max-width: 990px) {
+
+    .startPage{
+        height: 500px;
+    }
+}

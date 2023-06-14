@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename= 'style_devices.css') }}">-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename= 'style_index.css') }}">-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename= 'style_security.css') }}">-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename= 'style_signin.css') }}">-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename= 'style_signup.css') }}">-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename= 'style_weatherSt.css') }}">-->
+    <script src="{{ url_for('static', filename= 'script.js') }}"></script>
+</head>
+
+<body>
+<!--Navigation-->
+<nav>
+    <ul>
+        <li><a href="{{ url_for('main.index') }}">
+            Home
+        </a></li>
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('main.devices') }}">
+            Devices
+        </a></li>
+        {% endif %}
+        {% if not current_user.is_authenticated %}
+        <li><a href="{{ url_for('auth.login') }}">
+            Login
+        </a></li>
+        {% endif %}
+        {% if not current_user.is_authenticated %}
+        <li><a href="{{ url_for('auth.signup') }}">
+            Signup
+        </a></li>
+        {% endif %}
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('auth.logout') }}">
+            Logout
+        </a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="alert">
+    <h1> Переверните устройство в горизонтальное положение, пожалуйста!</h1>
+    <div class="alert_img"></div>
+</div>
+
+<!--Content-->
+{% block content %}
+{% endblock %}
+
+<div id="footer">
+    <footer>
+        &copy; IOT Project - Sweet Home
+        <p>Telegram: @...</p>
+    </footer>
+</div>
+
+</body>
+
+</html>

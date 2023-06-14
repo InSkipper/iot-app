@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 15px;
+    /*text-align: center;*/
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(170,221,255,1) 17%, rgba(1,126,208,1) 100%);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+
+.greenhouse_btn, .weatherStation_btn, .security_btn, .menu_btn, .logout_btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: rgb(0, 133, 20); /* Серый цвет фона */
+    color: #dedede; /* Белый цвет текста */
+    border: 2px solid #000000; 
+    border-radius: 4px;
+    font: italic small-caps bold 16px cursive;
+
+    padding: 10px 15px; 
+    text-decoration: none;  
+    cursor: pointer;
+}
+
+.logout_btn{
+    background: black;
+}
+
+.account_btn{
+    text-align: right;
+    float: right;
+}
+
+.navigation_btn {
+    text-align: center;
+    position: relative;
+    display: inline;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    /*background-color: rgb(255, 255, 255);*/
+    background: rgb(255,0,254);
+    background: linear-gradient(0deg, rgba(255,0,254,1) 0%, rgba(0,255,222,1) 63%,  rgba(163,198,221,1) 0%);
+    margin: 0;
+    min-height: 100vh;
+}
+
+figure {
+    width: 100%; /* Ширина области */
+    height: 700px; /* Высота области */
+    margin: 0px; /* Обнуляем отступы */
+}
+
+.startPage {
+    background-image: url("http://images-iot.storage.yandexcloud.net/popov-irit.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.startPage .NameWeb{
+    font: italic small-caps bold 28px/2 cursive;
+    background-color: rgba(255, 255, 255, 0.384);
+    width: 600px;
+    height: 70px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 5px 45px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-left:100px;
+    margin-top: 21%;
+    line-height: 2em;
+}
+
+#stateAlarm{
+    text-align: center;
+    background-color: rgb(237, 0, 0);
+}
+
+.nowDist{
+    margin-left: 3%;
+}
+
+.SettingDistance .settingText{
+    color: #ffffff;
+    font-size: 22px;
+    position: relative;
+    vertical-align: baseline;
+    left: 5%;
+    line-height: 2em;
+    background-color: #4b4b4b;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    display: inline-block;
+    width: 500px;
+
+    margin: 5px;
+    padding-bottom: 15px;
+
+}
+
+/* Full-width input fields */
+input[type=number] {
+    width: 10%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    font-size: 1rem;
+    text-align: center;
+
+    position: relative;
+    left: 3%;
+}
+
+input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+
+  position: relative;
+  left: 3%;
+}
+
+.startPage a:active, /* активная/посещенная ссылка */
+.startPage a:hover,  /* при наведении */
+.startPage a {
+    background-color: rgb(0, 14, 117);
+    padding: 10px;
+    text-align: center;
+    vertical-align: baseline;
+    color: #ffffff;
+    position: relative;
+    left: 6%;
+}
+
+.AboutProject figure {
+    width: 100%; /* Ширина области */
+    height: 500px; /* Высота области */
+    margin: 0; /* Обнуляем отступы */
+}
+
+.ColorProject{
+    /*background-color: rgba(234, 148, 255, 0.262);*/
+    position: relative;
+    top: 15vh;
+}
+
+.TitlClass{
+    font: italic small-caps bold 25px/2 cursive;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+
+.container {
+    padding: 16px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font: italic small-caps bold 16.4px cursive;
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 142, 219, 0.8);
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    font-size: 1rem;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    /*background-color: #04AA6D;*/
+    background-color: #050c87;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 1rem;
+  }
+  
+  .registerbtn:hover {
+    opacity:1;
+  }
+
+/*-----------------------------------------------------*/
+/*-----------------------------------------------------*/
+
+.DataLens figure {
+    width: 100%; /* Ширина области */
+    height: 520px; /* Высота области */
+    margin: 0; /* Обнуляем отступы */
+}
+
+.DataLens .row {
+    margin-top: -30px;
+}
+
+.ColorDataLens{
+    /*background-color: rgba(194, 231, 255, 0.290);*/
+    margin-top: -40px;
+}
+
+.resized{
+    height: 100%;
+    width: 100%;
+}
+
+.HrefLens {
+    height: 85%;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+#footer {
+    position: relative; /* Фиксированное положение */
+    text-align: right;
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding-top: 10px; /* Поля вокруг текста */
+    padding-right: 10px; /* Поля вокруг текста */
+    padding-left: 10px; /* Поля вокруг текста */
+    padding-bottom: 3px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(163,198,221,1) 9%);
+    color: #000000; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media all and (orientation: portrait){
+    .startPage .NameWeb{
+        margin-block-start: 5em;
+    }
+
+    .ColorProject{
+        top: 0;
+    }
+}
+
+.alert {
+    display: none;
+}
+
+.alert_img{
+    display: none;
+}
+
+@media screen and (orientation: portrait) { 
+    .alert {
+        display: flex;
+    
+        background-color: #ffffff;
+    
+        position: fixed;
+        width: 100%;
+        height: 100%;  
+        display: block;
+        z-index:99999999;
+    
+        text-align: center;
+    
+        padding: 100px;
+    }
+    
+
+    .alert_img{
+        display: flex;
+    
+        background-image: url("http://images-iot.storage.yandexcloud.net/smile-glasses.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 10%;
+        height: 30%;
+    
+        margin-left: 45%;
+    }
+} 
+
+@media(max-width: 990px) {
+    .startPage .NameWeb{
+        font: italic small-caps bold 28px/2 cursive;
+        background-color: rgba(255, 255, 255, 0.384);
+        width: 600px;
+        height: 70px;
+        box-shadow: 0 5px 45px rgba(0, 0, 0, 0.6);
+        text-shadow: 0 5px 45px rgba(255, 255, 255, 0.8);
+        text-align: center;
+        margin-left:100px;
+        margin-top: 15%;
+        line-height: 2em;
+    }
+
+    .SettingDistance .settingText{
+        color: #ffffff;
+        font-size: 22px;
+        position: relative;
+        vertical-align: baseline;
+        left: 5%;
+        line-height: 2em;
+        background-color: #4b4b4b;
+        padding-left: 15px;
+        padding-top: 15px;
+    
+        display: inline-block;
+        width: 600px;
+    
+        margin: 5px;
+        padding-bottom: 15px;
+    
+    }
+
+  }
+  

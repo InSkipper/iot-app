@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Smart Home</title>
+
+<!--<header>-->
+<!--    <div class="account_btn">-->
+<!--        <a class="signin_btn" href="{{ url_for('auth.login') }}">Войти</a>-->
+<!--        <a class="signup_btn" href="{{ url_for('auth.signup') }}">Зарегистрироваться</a>-->
+<!--        <a class="logout_btn" href="{{ url_for('auth.logout') }}">Выйти</a>-->
+<!--    </div>-->
+<!--</header>-->
+
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style_index.css') }}">
+
+<div class="bodyPage">
+
+    <figure class="startPage">
+        <b><div class="NameWeb">
+            <h1>Умный Sweet Home!</h1>
+        </div>
+        <div class="btnStart">
+            <a href="{{ url_for('main.devices') }}" >Начнем</a>
+        </div></b>
+    </figure>
+
+    <div class="ColorProject">
+        <figure class = "AboutProject">
+            <div class="TitlClass">
+                <h2>Проект</h2>
+            </div>  
+            <div class="row">      
+                <div class="column">
+                    <figure class="ImageAllProject">
+                        <div class="ImgZonePr">
+                            <!--<img src="images/arduino-project.jpg" alt="arduino">--->
+                        </div>
+                    </figure >
+                </div>
+                <div class="column">
+                    <figure class="DescriptionAllProject">
+                        <div class="descriptionOfArduino">
+                            <h3>Мы предлагаем Вам три модуля: «Метеостанция», «Сигнализация», «Оранжерея», которые осуществляют человеко-машинное взаимодействие с системой «Умный дом» посредством веб-интерфейса.<br><br>
+                                <li> Модуль «Метеостанция» позволяет отслеживать качество воздуха и вероятность выпадения осадков.</li><br>
+                                <li> Модуль «Сигнализация» позволяет отслеживать движение около объекта на заданном расстоянии.</li><br>
+                                <li> Модуль «Оранжерея» позволяет производить уход за растениями как автономно, так и принудительно.</li><br>
+                            </h3>
+                        </div>
+                    </figure>
+                </div>
+            </div> 
+        </figure>
+    </div> 
+
+
+    <div class="ColorCommand">
+        <figure class = "AboutCommand">
+            <div class="TitlClass">
+                <h2 class="command">Команда</h2>
+            </div>  
+            <div class="row">      
+                <div class="column">
+                    <figure class="DescriptionComand">
+                        <div class="descriptionOfAthors">
+                            <nobr><h4>Каюмова Юлия Евгеньевна - тимлид, разработчик</h4></nobr>
+                            <nobr><h4>Леонтьева Екатерина Михайловна – аналитик</h4></nobr>
+                            <nobr><h4>Служеникина Елена Юрьевна – разработчик</h4></nobr>
+                            <nobr><h4>Латкин Даниил Максимович - разработчик</h4></nobr>
+                        </div>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="ImageAllComand">
+                        <div class="ImgZoneCom"></div>
+                    </figure >
+                </div>
+            </div> 
+        </figure>
+    </div>
+
+</div>
+
+{% endblock %}

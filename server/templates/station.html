@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Smart Weather Station</title>
+</head>
+
+<body>
+<figure class="startPage">
+    <div class="row">
+        <div class="column">
+            <figure class="NameWeb">
+                <div class="NameZoneWeb">
+                    <h1>Метеостанция Sweet Home</h1>
+                </div>
+            </figure>
+        </div>
+        <div class="column">
+            <figure class="ImageMeteo">
+                <div class="ImgZoneMet"></div>
+            </figure>
+        </div>
+    </div>
+</figure>
+
+<figure class="mainPage">
+    <div>
+        <p>Click to turn:
+            <a href="http://www.iotproject.com.website.yandexcloud.net/ledOn" target="myIframe">
+                LED ON
+            </a></p>
+    </div>
+    <div>
+        <p>Ciclk to turn:
+            <a href="http://www.iotproject.com.website.yandexcloud.net/ledOff" target="myIframe">
+                LED OFF
+            </a></p>
+    </div>
+    <div>
+        <p>State: </p>
+        <iframe name="myIframe" width="200" height="90" frameborder="0"
+                src="./station_files/saved_resource.html"></iframe>
+    </div>
+</figure>
+
+<div id="footer">
+    <footer>
+        © IOT Project - Sweet Home
+        <p>Telegram: @...</p>
+    </footer>
+</div>
+
+
+</body>
+</html>

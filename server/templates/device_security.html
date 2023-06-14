@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Smart Home</title>
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style_security.css') }}">
+
+<header>
+    <div class="navigation_btn">
+        <a class="menu_btn" href="{{ url_for('main.devices') }}">Девайсы</a>
+        <a class="greenhouse_btn" href="{{ url_for('main.greenhouse') }}">Оранжерея</a>
+        <a class="weatherStation_btn" href="{{ url_for('main.weatherStation') }}">Метеостанция</a>
+    </div>
+    <!--            <div class="account_btn">-->
+    <!--                <a class="logout_btn" href="{{ url_for('auth.logout') }}">Выйти</a>-->
+    <!--            </div>-->
+</header>
+
+<figure class="startPage">
+    <b>
+        <div class="NameWeb">
+            <h1>Сигнализация</h1><br>
+        </div>
+        <br><br>
+        <div class="SettingDistance">
+            <h3 class="settingText" id="stateAlarm">
+                Статус сигнализации<br>
+            </h3><br>
+            <h3 class="settingText setDist">
+                Расстояние до двери:
+                <input type="number" class="inputDist" placeholder="м">
+                <a class="ChDist" href="ChangeDistance">Настороить</a><br>
+            </h3><br>
+            <h3 class="settingText readDist">
+                Текущее расстояние:
+                <nobr class="nowDist"> 100</nobr>
+                <nobr> метров</nobr>
+                <br>
+            </h3>
+            <br>
+        </div>
+</figure>
+
+<div class="ColorProject">
+    <figure class="AboutProject">
+        <form>
+            <div class="container signin TitlClass">
+                <h2>Сменить пароль</h2>
+                <!-- <p>Please fill in this form to create an account.</p> -->
+                <hr>
+
+                <label for="psw-old"><b>Старый пароль</b></label>
+                <input type="password" placeholder="Введите старый пароль" name="psw-old" id="psw-old" required>
+
+                <label for="psw"><b>Новый пароль</b></label>
+                <input type="password" placeholder="Введите новый пароль" name="psw" id="psw" required>
+
+                <hr>
+
+                <button type="submit" class="registerbtn">Изменить</button>
+            </div>
+        </form>
+    </figure>
+</div>
+
+
+<!--<div class="ColorDataLens">
+    <figure class = "DataLens">
+        <div class="HrefLens">
+            <iframe class="resized" src="https://datalens.yandex/0jx6ztwecrxoq?_theme=dark"></iframe>
+        </div>
+    </figure>
+</div>-->
+
+{% endblock %}

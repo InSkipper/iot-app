@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    padding: 15px;
+    text-align: right;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(170,221,255,1) 17%, rgba(1,126,208,1) 100%);
+    color: white;
+    font-size: 10px;
+}
+
+.logout_btn, .signin_btn, .signup_btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: black; /* Серый цвет фона */
+    color: #dedede; /* Белый цвет текста */
+    border: 2px solid #000000; 
+    border-radius: 4px;
+    font: italic small-caps bold 16px cursive;
+
+    padding: 10px 15px; 
+    text-decoration: none;  
+    cursor: pointer;
+}
+
+
+body {
+    /*background-color: rgb(255, 255, 255);*/
+    background: rgb(163,198,221);
+    background: linear-gradient(0deg, rgba(238,183,237,1) 11%, rgba(238,183,237,1) 54%, rgba(118,222,255,1) 76%);
+    margin: 0;
+    min-height: 100vh;
+}
+
+figure {
+    width: 100%;
+    height: 700px;
+    margin: 0px;
+}
+
+.AboutProject figure {
+    width: 100%; /* Ширина области */
+    height: 500px; /* Высота области */
+    margin: 0; /* Обнуляем отступы */
+}
+
+.AboutCommand figure {
+    width: 100%; /* Ширина области */
+    height: 400px; /* Высота области */
+    margin: 0; /* Обнуляем отступы */
+}
+
+.AboutCommand .row {
+    margin-top: -30px;
+}
+
+.ColorProject{
+    /*background-color: rgba(234, 148, 255, 0.262);*/
+    margin-top: -35px;
+    background-color: rgba(181, 228, 255, 0.311);
+    padding: 0;
+}
+
+.ColorCommand{
+    /*background-color: rgba(194, 231, 255, 0.290);*/
+    margin-top: -40px;
+}
+
+.startPage {
+    background-image: url("http://images-iot.storage.yandexcloud.net/smart-home-poster-banner-background.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.startPage .NameWeb{
+    font: italic small-caps bold 25px/2 cursive;
+    text-align: left;
+    margin-left:100px;
+    margin-top: 310px;
+    line-height: 2em;
+    
+}
+
+.startPage .btnStart {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: rgb(24, 61, 226); /* Серый цвет фона */
+    color: #dedede; /* Белый цвет текста */
+    border: 2px solid #3a0098; 
+    border-radius: 4px; 
+    
+    padding: 15px 30px; 
+    text-decoration: none; 
+    font-size: 30px; 
+    cursor: pointer;
+
+    text-align: left;
+    margin-left:250px;
+    margin-top: 10px;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover  /* при наведении */
+ {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #dedede;
+}
+
+.TitlClass{
+    font: italic small-caps bold 30px/2 cursive;
+    text-align: center;
+}
+
+.TitlClass .command{
+    font: italic small-caps bold 45px cursive;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.descriptionOfAthors {
+    display: inline;
+    position: relative;
+    top: 10%;
+    font: italic small-caps 25px cursive;
+}
+
+/*.ColorCommand .row {
+    background-image: url("http://images-iot.storage.yandexcloud.net/team.jpg");
+    background-repeat: no-repeat;
+}*/
+
+.descriptionOfArduino{
+    display: inline;
+    position: relative;
+    font: italic small-caps 18px cursive;
+}
+
+.ImgZonePr{
+    background-image: url("http://images-iot.storage.yandexcloud.net/arduino-project.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.ImgZoneCom{
+    background-image: url("http://images-iot.storage.yandexcloud.net/team-without-big-background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.alert {
+    display: none;
+}
+
+.alert_img{
+    display: none;
+}
+
+@media screen and (orientation: portrait) { 
+    .alert {
+        display: flex;
+    
+        background-color: #ffffff;
+    
+        position: fixed;
+        width: 100%;
+        height: 100%;  
+        display: block;
+        z-index:99999999;
+    
+        text-align: center;
+    
+        padding: 100px;
+    }
+    
+
+    .alert_img{
+        display: flex;
+    
+        background-image: url("http://images-iot.storage.yandexcloud.net/smile-glasses.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 10%;
+        height: 30%;
+    
+        margin-left: 45%;
+    }
+}    
+
+#footer {
+    position: relative; /* Фиксированное положение */
+    text-align: right;
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding-top: 10px; /* Поля вокруг текста */
+    padding-right: 10px; /* Поля вокруг текста */
+    padding-left: 10px; /* Поля вокруг текста */
+    padding-bottom: 3px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(163,198,221,1) 9%);
+    color: #000000; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    font-weight: bold;
+  }
+
+  
+@media(max-width: 990px) {
+
+    .TitlClass{
+        font: italic small-caps bold 28px/2 cursive;
+        text-align: center;
+    }
+    
+    .TitlClass .command{
+        font: italic small-caps bold 40px cursive;
+        text-align: center;
+        margin-top: 60px;
+    }
+    
+    .descriptionOfAthors {
+        display: inline;
+        position: relative;
+        top: 10%;
+        font: italic small-caps 22px cursive;
+    }
+
+    .descriptionOfArduino{
+        display: inline;
+        position: relative;
+        font: italic small-caps 15px cursive;
+    }
+
+    .AboutCommand .row {
+        background-image: url("http://images-iot.storage.yandexcloud.net/team-840x295.jpg");
+        background-position: 4%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .ImgZoneCom{
+        display: none;
+    }
+
+}

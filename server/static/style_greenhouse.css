@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.ChangeN .column{
+    text-align: center;
+    width: 25%;
+    padding: 15px;
+    height: 25%;
+    padding-bottom: 15px;
+}
+
+.ChangeN .row{
+    height: 25%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    padding: 15px;
+    /*text-align: center;*/
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(170,221,255,1) 17%, rgba(1,126,208,1) 100%);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+
+.greenhouse_btn, .weatherStation_btn, .security_btn, .menu_btn, .logout_btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: rgb(0, 133, 20); /* Серый цвет фона */
+    color: #dedede; /* Белый цвет текста */
+    border: 2px solid #000000; 
+    border-radius: 4px;
+    font: italic small-caps bold 16px cursive;
+
+    padding: 10px 15px; 
+    text-decoration: none;  
+    cursor: pointer;
+}
+
+.logout_btn{
+    background: black;
+}
+
+.account_btn{
+    text-align: right;
+    float: right;
+}
+
+.navigation_btn {
+    text-align: center;
+    position: relative;
+    display: inline;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+body {
+    background: rgb(255,209,148);
+    background: linear-gradient(0deg, rgba(255,209,148,1) 0%, rgba(249,255,153,1) 39%, rgba(84,174,3,1) 100%);
+    margin: 0;
+    min-height: 100vh;
+}
+
+hr {
+    border: 0.5px solid #00000029;
+  }
+
+/*figure {
+    width: 100%; 
+    height: 700px; 
+    margin: 0px;
+}*/
+
+figure .ChangeN {
+    width: 100%; /* Ширина области */
+    height: 25%; /* Высота области */
+    margin: 0px; /* Обнуляем отступы */
+}
+
+.ChangeN{
+    background-color: rgba(187, 248, 96, 0.19);
+}
+
+figure {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.startPage {
+    background-image: url("https://storage.yandexcloud.net/images-iot/garden2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.startPage .NameWeb{
+    font: italic small-caps bold 28px/2 cursive;
+    background-color: rgba(255, 255, 255, 0.384);
+    width: 600px;
+    height: 70px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 5px 45px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-left:100px;
+    margin-top: 10%;
+    line-height: 2em;
+    
+}
+
+/*.Sensors .SensorsText{
+    color: #ffffff;
+    font-size: 22px;
+    position: relative;
+    vertical-align: baseline;
+    text-align: center;
+    left: 5%;
+    line-height: 2em;
+    background-color: #00441a;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    display: inline-block;
+    width: 400px;
+
+    padding-bottom: 15px;
+    margin: 5px;
+    margin-left: 130px;
+}*/
+
+#smokeDetector {
+    color: #ffffff;
+    font-size: 22px;
+    position: relative;
+    vertical-align: baseline;
+    text-align: center;
+    left: 5%;
+    line-height: 2em;
+    background-color: #00441a;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    display: inline-block;
+    width: 400px;
+
+    padding-bottom: 15px;
+    margin: 5px;
+    margin-left: 130px;
+}
+
+.sensoreTemperature {
+    color: #ffffff;
+    font-size: 22px;
+    position: relative;
+    vertical-align: baseline;
+    text-align: center;
+    left: 5%;
+    line-height: 2em;
+    background-color: #00441a;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    display: inline-block;
+    width: 400px;
+
+    padding-bottom: 15px;
+    margin: 5px;
+    margin-left: 130px;
+}
+
+.sensoreHumidity {
+    color: #ffffff;
+    font-size: 22px;
+    position: relative;
+    vertical-align: baseline;
+    text-align: center;
+    left: 5%;
+    line-height: 2em;
+    background-color: #00441a;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    display: inline-block;
+    width: 400px;
+
+    padding-bottom: 15px;
+    margin: 5px;
+    margin-left: 130px;
+}
+
+.TitlClass{
+    font: italic small-caps bold 25px/2 cursive;
+    text-align: center;
+}
+
+.water_btn {
+    background-color: #81a2ee;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.lamp_btn {
+    background-color: #e983f5;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.fertilizers_btn {
+    background-color: #13e471;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.warm_btn {
+    background-color: #eeb366;
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.ChangeWind{
+    text-align: center;
+    background-color: rgba(248, 197, 96, 0.19);
+}
+
+.ZoneWind {
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    
+    padding: 11.5px; 
+    font-size: 20px; 
+}
+
+.wind_btn {
+    color: #000000;
+    font-weight: bold;
+
+    display: inline-block;
+    
+    padding: 11.5px; 
+    text-decoration: none; 
+    font-size: 20px; 
+    cursor: pointer;
+
+}
+
+.wind_btn:hover {
+    text-decoration: none;
+    color: #1409e9;
+}
+
+/* Full-width input fields */
+input[type=number] {
+    width: 10%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    font-size: 1rem;
+    text-align: center;
+
+    width: 80px;
+}
+
+input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+
+  width: 80px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+#footer {
+    position: relative; /* Фиксированное положение */
+    text-align: right;
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding-top: 10px; /* Поля вокруг текста */
+    padding-right: 10px; /* Поля вокруг текста */
+    padding-left: 10px; /* Поля вокруг текста */
+    padding-bottom: 3px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(163,198,221,1) 9%);
+    color: #000000; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+    font-weight: bold;
+  }
+
+
+
+  .alert {
+    display: none;
+}
+
+.alert_img{
+    display: none;
+}
+
+@media screen and (orientation: portrait) { 
+    .alert {
+        display: flex;
+    
+        background-color: #ffffff;
+    
+        position: fixed;
+        width: 100%;
+        height: 100%;  
+        display: block;
+        z-index:99999999;
+    
+        text-align: center;
+    
+        padding: 100px;
+    }
+    
+
+    .alert_img{
+        display: flex;
+    
+        background-image: url("http://images-iot.storage.yandexcloud.net/smile-glasses.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 10%;
+        height: 30%;
+    
+        margin-left: 45%;
+    }
+} 

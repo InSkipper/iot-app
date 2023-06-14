@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style_signup.css') }}">
+
+<!--Форма регистрации-->
+<form method="POST" action="/signup">
+    <div class="container signup">
+        <!--Flashed messages-->
+        {% for message in get_flashed_messages() %}
+        <div class="notification">
+            {{ message }}
+        </div>
+        {% endfor %}
+
+        <h1>Регистрация</h1>
+        <hr>
+        
+        <label for="login"><b>Логин</b></label>
+        <input type="text" placeholder="Введите логин" name="login" id="login" required>
+
+        <label for="email"><b>Почта</b></label>
+        <input type="email" placeholder="Введите почту" name="email" id="email" required>
+
+        <label for="password"><b>Пароль</b></label>
+        <input type="password" placeholder="Введите пароль" name="password" id="password" required>
+
+        <label for="password_conf"><b>Повторите пароль</b></label>
+        <input type="password" placeholder="Повторите пароль" name="password_conf" id="password_conf" required>
+        <hr>
+
+        <button type="submit" class="registerbtn">Зарегистрироваться</button>
+    </div>
+
+    <div class="container signin">
+        <p>Уже есть аккаунт? <a href="{{ url_for('auth.login') }}">Войти</a>.</p>
+    </div>
+</form>
+{% endblock %}

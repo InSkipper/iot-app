@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style_devices.css') }}">
+
+<title>Welcome to Device of Smart Home, {{ login }}</title>
+
+<header>
+    <div class="navigation_btn">
+        <a class="greenhouse_btn" href="{{ url_for('main.greenhouse') }}">Оранжерея</a>
+        <a class="weatherStation_btn" href="{{ url_for('main.weatherStation') }}">Метеостанция</a>
+        <a class="security_btn" href="{{ url_for('main.security') }}">Сигнализация</a>
+    </div>
+    <!--    <div class="account_btn">-->
+    <!--        <a class="logout_btn" href="{{ url_for('auth.logout') }}">Выйти</a>-->
+    <!--    </div>-->
+</header>
+
+<figure class="startPage">
+    <div class="NameWeb">
+        <h1>Устройства Sweet Home</h1>
+    </div>
+    <div class="TaskWeb">
+        <h2>Выберите устройство</h2>
+    </div>
+</figure>
+
+<figure class="Devices">
+    <div class="row">
+        <div class="column">
+            <figure class="greenhouse">
+
+                <div class="button_greenhouse">
+                    <a class="ZoneImg" href="{{ url_for('main.greenhouse') }}">
+                        <div class="NameZone">
+                            <h2>Оранжерея</h2>
+                        </div>
+                        <img class="ZoneImg" src="http://images-iot.storage.yandexcloud.net/home-greenhouse370x247.jpg"
+                             alt="greenhouse">
+                    </a>
+                </div>
+            </figure>
+        </div>
+        <div class="column">
+            <figure class="weatherStation">
+                <div class="button_weatherStation">
+                    <a class="ZoneImg" href="{{ url_for('main.weatherStation') }}">
+                        <div class="NameZone">
+                            <h2>Метеостанция</h2>
+                        </div>
+                        <img class="ZoneImg" src="http://images-iot.storage.yandexcloud.net/home-inside370x245.jpg"
+                             alt="weatherStation">
+                    </a>
+                </div>
+            </figure>
+        </div>
+        <div class="column">
+            <figure class="alarmSystem">
+                <div class="button_alarmSystem">
+                    <a class="ZoneImg" href="{{ url_for('main.security') }}">
+                        <div class="NameZone">
+                            <h2>Сигнализация</h2>
+                        </div>
+                        <img class="ZoneImg" src="http://images-iot.storage.yandexcloud.net/home-outside370x245.jpg"
+                             alt="weatherStation">
+                    </a>
+                </div>
+            </figure>
+        </div>
+    </div>
+</figure>
+{% endblock %}

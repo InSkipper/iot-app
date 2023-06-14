@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Smart Home</title>
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style_weatherSt.css') }}">
+
+<header>
+    <div class="navigation_btn">
+        <a class="menu_btn" href="{{ url_for('main.devices') }}">Девайсы</a>
+        <a class="greenhouse_btn" href="{{ url_for('main.greenhouse') }}">Оранжерея</a>
+        <a class="security_btn" href="{{ url_for('main.security') }}">Сигнализация</a>
+    </div>
+    <!--            <div class="account_btn">-->
+    <!--                <a class="logout_btn"href="{{ url_for('auth.logout') }}">Выйти</a>-->
+    <!--            </div>-->
+</header>
+
+<figure class="startPage">
+    <b>
+        <div class="NameWeb">
+            <h1>Метеостанция</h1><br>
+        </div>
+    </b>
+    <br>
+<!--    ТУТ НАДО ПРОСТО СДЕЛАТЬ КНОПКУ ПО КОТОРОЙ ДАННЫЕ ВО ВСЕХ ЯЧЕЙКАХ, КРОМЕ СВЕТА, БУДУТ ОБНОВЛЯТЬСЯ. НУ ИЛИ ОБНОВЛЯТЬ-->
+<!--    ЧЕРЕЗ JS-->
+    <div class="row">
+        <div class="column ">
+            <form method="POST" action="{{ url_for('hub.greenhouse_event') }}">
+                <input type="hidden" name="name" value="greenhouse">
+                <input type="hidden" name="event" value="ledSwitch">
+
+                <figure class="ZoneTemperature">
+                    <button type="submit" formtarget="led-status" class="btn Temperature_btn">
+                        Свет
+                    </button>
+                    <p>State: </p>
+                    <h2>
+                        <iframe name="led-status" frameBorder="0"></iframe>
+                    </h2>
+                </figure>
+            </form>
+        </div>
+        <div class="column">
+            <figure class="ZoneHumidity">
+                <a class="btn Humidity_btn" href="{{ url_for('main.get_temperature') }}" target="Humidity_Iframe">
+                    Температура и влажность
+                </a>
+                <p>State: </p>
+                <iframe name="Humidity_Iframe" frameBorder="0"></iframe>
+            </figure>
+        </div>
+        <div class="column">
+            <figure class="ZoneAir">
+                <a class="btn Air_btn" href="{{ url_for('main.get_pressure') }}" target="Air_Iframe">
+                    Давление
+                </a>
+                <p>State: </p>
+                <iframe name="Air_Iframe" frameBorder="0"></iframe>
+            </figure>
+        </div>
+        <div class="column">
+            <figure class="ZonepPrecipitation">
+                <a class="btn Precipitation_btn" href="{{ url_for('main.get_co2') }}" target="co2_Iframe">
+                Содержание опасных газов
+            </a>
+                <p>State: </p>
+                <iframe name="co2_Iframe" frameBorder="0"></iframe>
+            </figure>
+        </div>
+    </div>
+</figure>
+
+<button onclick="reloadIframe(); return false;">Обновить</button>
+
+<div class="ColorDataLens">
+    <figure class="DataLens">
+        <div class="HrefLens">
+            <iframe id="data-lens" class="resized" frameborder="0"
+                    src="https://datalens.yandex/xivav0zznn3yn?_embedded=1&_no_controls=1"></iframe>
+        </div>
+    </figure>
+</div>
+{% endblock %}

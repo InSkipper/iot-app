@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <title>Smart Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'style_greenhouse.css') }}">
+
+
+        <header>
+            <div class="navigation_btn">
+                <a class="menu_btn" href="{{ url_for('main.devices') }}">Девайсы</a>
+                <a class="weatherStation_btn" href="{{ url_for('main.weatherStation') }}">Метеостанция</a>
+                <a class="security_btn" href="{{ url_for('main.security') }}">Сигнализация</a>
+            </div>
+<!--            <div class="account_btn">-->
+<!--                <a class="logout_btn"href="{{ url_for('auth.logout') }}">Выйти</a>-->
+<!--            </div>-->
+        </header>
+
+        <figure class="startPage">
+            <div class="NameWeb">
+                <h1>Оранжерея</h1>
+                <div><h3>Датчики</h3></div>
+            </div><br><br><br><br><br>
+            <div class="Sensors">
+                <h3 class="SensorsText" id="smokeDetector">
+                    Датчик дыма:
+                    <nobr class="nowState"> 100</nobr>
+                    <nobr> </nobr>
+                </h3><br>
+                <h3 class="SensorsText sensoreTemperature">
+                    Температура:      
+                    <nobr class="nowState"> 100</nobr>
+                    <nobr> ° С </nobr>
+                </h3><br>
+                <h3 class="SensorsText sensoreHumidity">
+                    Влажность: 
+                    <nobr class="nowState"> 100</nobr>
+                    <nobr> %</nobr>
+                </h3><br>
+            </div>
+        </figure>  
+        
+        <figure class = "ChangeN">
+            <div class="TitlClass">
+                <h2>Управление нагрузками</h2>
+            </div>  
+            <div class="row">      
+                <div class="column ">
+                    <figure class="ZoneWatering">                      
+                            <a class="btn water_btn" href="ledOn" target="water_Iframe">
+                                Принудительный полив
+                            </a>
+                        <p>State: </p>
+                        <iframe name="water_Iframe" width="200" height="90" frameBorder="0"></iframe>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="ZoneLamp">
+                        <a class="btn lamp_btn" href="ledOn" target="lamp_Iframe">
+                            Вкл/Выкл фитолампу
+                        </a>
+                        <p>State: </p>
+                        <iframe name="lamp_Iframe" width="200" height="90" frameBorder="0"></iframe> 
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="ZoneFertilizers">
+                        <a class="btn fertilizers_btn" href="ledOn" target="fertilizers_Iframe">
+                            Подача удобрения
+                        </a>
+                        <p>State: </p>
+                        <iframe name="fertilizers_Iframe" width="200" height="90" frameBorder="0"></iframe> 
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure class="ZoneWarming">
+                        <a class="btn warm_btn" href="ledOn" target="warm_Iframe">
+                            Вкл/Выкл нагревательного элемента
+                        </a>
+                        <p>State: </p>
+                        <iframe name="warm_Iframe" width="200" height="90" frameBorder="0"></iframe> 
+                    </figure>
+                </div>
+            </div>
+        </figure>
+        
+        <figure class = "ChangeWind">
+            <div class="TitlClass">
+                <h2>Регулировка мощности вентилятора</h2>
+            </div>
+            <figure class="ZoneWind">
+                <p>Изменить мощность на</p>
+                <input type="number" class="inputWind" placeholder="%">
+                <a class="btn wind_btn" href="ledOn" target="wind_Iframe">
+                    Изменить
+                </a>
+                <p>State: </p>
+                <iframe name="wind_Iframe" width="200" height="90" frameBorder="0"></iframe> 
+            </figure>
+        </figure>
+        {% endblock %}

@@ -1,0 +1,142 @@
+* {box-sizing: border-box}
+
+body{
+  margin: 0;
+  background: rgb(37,29,167);
+  background: linear-gradient(90deg, rgba(37,29,167,0.5) 0%, rgba(145,161,226,0.5) 22%, rgba(147,147,255,0.5) 41%, rgba(255,87,172,0.5) 58%, rgba(219,104,162,0.5) 80%, rgba(172,25,100,0.5) 100%);
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font: italic small-caps bold 16.4px cursive;
+  width: 40%;
+  margin: 0 auto;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-size: 1rem;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  /*background-color: #04AA6D;*/
+  background-color: #050c87;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signup {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 2px;
+}
+
+.signin {
+  background: rgb(255,255,255);
+  background: linear-gradient(212deg, rgba(255,255,255,1) 0%, rgba(124,190,255,1) 39%, rgba(255,135,230,1) 69%, rgba(255,255,255,1) 100%);
+}
+
+#footer {
+  position: fixed; /* Фиксированное положение */
+  text-align: right;
+  left: 0; bottom: 0; /* Левый нижний угол */
+  padding-top: 10px; /* Поля вокруг текста */
+  padding-right: 10px; /* Поля вокруг текста */
+  padding-left: 10px; /* Поля вокруг текста */
+  padding-bottom: 3px;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.6223739495798319) 0%, rgba(163,198,221,1) 9%);
+  color: #000000; /* Цвет текста */
+  width: 100%; /* Ширина слоя */
+  font-weight: bold;
+}
+
+
+.alert {
+  display: none;
+}
+
+.alert_img{
+  display: none;
+}
+
+@media screen and (orientation: portrait) { 
+  .alert {
+      display: flex;
+  
+      background-color: #ffffff;
+  
+      position: fixed;
+      width: 100%;
+      height: 100%;  
+      display: block;
+      z-index:99999999;
+  
+      text-align: center;
+  
+      padding: 100px;
+  }
+  
+
+  .alert_img{
+      display: flex;
+  
+      background-image: url("http://images-iot.storage.yandexcloud.net/smile-glasses.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 10%;
+      height: 30%;
+  
+      margin-left: 45%;
+  }
+} 
+
+@media(max-width: 990px) {
+  #footer {
+    position: relative;
+  }
+}

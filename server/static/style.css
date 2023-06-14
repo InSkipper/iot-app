@@ -1,0 +1,51 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.notification{
+    display: block;
+    color: red;
+    background-color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#footer {
+  /* position: fixed; /* Фиксированное положение */
+  text-align: right;
+  left: 0; bottom: 0; /* Левый нижний угол */
+  padding-top: 10px; /* Поля вокруг текста */
+  padding-right: 10px; /* Поля вокруг текста */
+  padding-left: 10px; /* Поля вокруг текста */
+  padding-bottom: 3px;
+  background: rgb(163, 198, 221); /* Цвет фона */
+  color: #000000; /* Цвет текста */
+  width: 100%; /* Ширина слоя */
+  font-weight: bold;
+}
